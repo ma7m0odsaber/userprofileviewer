@@ -32,6 +32,10 @@ Simple User Profile Viewer/
 
 ## Getting Started
 
+### Quick Start on Windows
+
+After MongoDB is running, double-click [`start-app.bat`](./start-app.bat) to start the backend and frontend in separate windows.
+
 ### Prerequisites
 
 - Node.js 18+
