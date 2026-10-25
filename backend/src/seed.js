@@ -52,21 +52,21 @@ const SEED_USERS = [
 async function seed() {
   try {
     await mongoose.connect(MONGO_URI);
-    console.log(`✅  Connected to MongoDB at ${MONGO_URI}`);
+    console.log(`Connected to MongoDB at ${MONGO_URI}`);
 
     await User.deleteMany({});
-    console.log('🗑️   Cleared existing user documents.');
+    console.log('Cleared existing user documents.');
 
     const inserted = await User.insertMany(SEED_USERS);
-    console.log(`🌱  Inserted ${inserted.length} user profiles.`);
+    console.log(`Inserted ${inserted.length} user profiles.`);
 
     inserted.forEach((u) => console.log(`   • ${u.name} <${u.email}>`));
   } catch (err) {
-    console.error('❌  Seed error:', err.message);
+    console.error('Seed error:', err.message);
     process.exit(1);
   } finally {
     await mongoose.disconnect();
-    console.log('🔌  Disconnected from MongoDB.');
+    console.log('Disconnected from MongoDB.');
   }
 }
 

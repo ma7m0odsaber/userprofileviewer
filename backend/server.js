@@ -30,10 +30,10 @@ app.use((err, req, res, _next) => {
 mongoose
   .connect(MONGO_URI)
   .then(() => {
-    console.log(`✅  MongoDB connected: ${MONGO_URI}`);
-    app.listen(PORT, () => console.log(`🚀  API server listening on http://localhost:${PORT}`));
+    console.log(`MongoDB connected: ${MONGO_URI}`);
+    app.listen(PORT, () => console.log(`API server listening on http://localhost:${PORT}`));
   })
   .catch((err) => {
-    console.error('❌  MongoDB connection failed:', err.message);
+    console.error('MongoDB connection failed:', err.message);
     process.exit(1);
   });
