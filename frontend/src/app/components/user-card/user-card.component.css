@@ -1,0 +1,62 @@
+/* ── Card shell ─────────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+/* ── Avatar ─────────────────────────────────────────────────────────────── */
+.card__avatar-wrapper {
+  margin-bottom: 1rem;
+}
+
+.card__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6366f1;
+}
+
+/* ── Body ───────────────────────────────────────────────────────────────── */
+.card__body {
+  text-align: center;
+}
+
+.card__name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.3rem;
+}
+
+.card__email {
+  display: block;
+  font-size: 0.85rem;
+  color: #6366f1;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  word-break: break-all;
+}
+
+.card__email:hover {
+  text-decoration: underline;
+}
+
+.card__bio {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.55;
+  margin: 0;
+}

@@ -1,0 +1,22 @@
+<section class="user-list">
+  <!-- Loading state -->
+  <div *ngIf="loading" class="state-box">
+    <div class="spinner" aria-label="Loading…"></div>
+    <p>Loading profiles…</p>
+  </div>
+
+  <!-- Error state -->
+  <div *ngIf="!loading && error" class="state-box state-box--error">
+    <p>⚠️ {{ error }}</p>
+  </div>
+
+  <!-- Empty state -->
+  <div *ngIf="!loading && !error && users.length === 0" class="state-box">
+    <p>No user profiles found. Run <code>npm run seed</code> in the backend.</p>
+  </div>
+
+  <!-- Profile grid -->
+  <div *ngIf="!loading && !error && users.length > 0" class="grid">
+    <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+  </div>
+</section>
